@@ -3,17 +3,18 @@
 /*================== Read More Text ==================*/
 
 $(function () {
-    var showChar = 120;
-    var moretext = "Continue Reading &nbsp;";
-    var lesstext = "Stop Reading  &nbsp;";
+    var showChar = 200;
+    var moretext = "View More";
+    var lesstext = "View Less";
     $('.comments-space').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
             var show_content = content.substr(0, showChar);
             var hide_content = content.substr(showChar, content.length - showChar);
             var html = show_content + '<span class="remaining-contents"><span>' + hide_content + '</span>' +
-                '<a href="" class="morelinksss read-text" style="display:block; margin-top:30px">' + moretext + '</a>'
-                + '</span>';
+                '<div class="p-0">' +
+                '<a href="" class="morelinksss btn btn-view-more" style="display:block; margin-top:30px">' + moretext + '</a>'
+                + '</span>' + '</div>';
             $(this).html(html);
         }
     });
@@ -33,18 +34,18 @@ $(function () {
     });
 });
 $(function () {
-    var showChar = 578;
-    var moretext = "Know More &nbsp;";
-    var lesstext = "Know Less &nbsp;";
+    var showChar = 658;
+    var moretext = " More &nbsp;";
+    var lesstext = " Less &nbsp;";
     $('.comments-spaces').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
             var show_content = content.substr(0, showChar);
             var hide_content = content.substr(showChar, content.length - showChar);
             var html = show_content + '<span class="remaining-contents"><span>' + hide_content + '</span>' +
-                '<div class="btn-wrapper mt-90">' +
-                '<a href="" class="morelinks btn btn-known" style="display:block;">' + moretext + '</a>'
-                + '</span>' + '</div>';
+
+                '<a href="" class="morelinks btn btn-more mt-35" style="display:block;">' + moretext + '</a>'
+                + '</span>';
             $(this).html(html);
         }
     });
@@ -102,18 +103,18 @@ $(function () {
         responsive: {
             0: {
                 items: 1,
-                dots: true,
-                nav: false
+                dots: false,
+                nav: true
             },
             400: {
                 items: 1,
-                dots: true,
-                nav: false
+                dots: false,
+                nav: true
             },
             600: {
                 items: 1,
-                dots: true,
-                nav: false
+                dots: false,
+                nav: true
             },
             800: {
                 items: 1,
@@ -148,12 +149,12 @@ $(function () {
                 nav: false
             },
             600: {
-                items: 1,
+                items: 2,
                 dots: true,
                 nav: false
             },
             800: {
-                items: 1,
+                items: 2,
                 dots: true,
                 nav: false
             },
@@ -170,21 +171,21 @@ $(function () {
 
 
 /*===================== Scroll Top Function Script ======================*/
-//$(function () {
-//    $(window).scroll(function () {
-//        var scroll = $(window).scrollTop();
-//        if (scroll >= 100) {
-//            $("nav").addClass("fixed-top sleep nav-color");
-//            $(".my-logo a img").addClass("scroll-logo-width ml-5");
-//        } else {
-//            $("nav").removeClass("fixed-top sleep nav-color ");
-//            $(".my-logo a img").removeClass("scroll-logo-width ml-5");
+$(function () {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 100) {
+            $("nav").addClass("fixed-top sleep");
 
-//        }
+        } else {
+            $("nav").removeClass("fixed-top sleep");
 
 
-//    });
-//});
+        }
+
+
+    });
+});
 //$(function () {
 //    $(window).scroll(function () {
 //        var scroll = $(window).scrollTop();
@@ -203,21 +204,6 @@ $(function () {
 
 
 /*===================== Nav tabs active Function Script ======================*/
-$('#draggable-point').draggable({
-    axis: 'x',
-    containment: "#audio-progress"
-});
-
-$('#draggable-point').draggable({
-    drag: function () {
-        var offset = $(this).offset();
-        var xPos = (100 * parseFloat($(this).css("left"))) / (parseFloat($(this).parent().css("width"))) + "%";
-
-        $('#audio-progress-bar').css({
-            'width': xPos
-        });
-    }
-});
 
 /*===================== Another Load More Script ======================*/
 $(".no-display").slice(0, 6).show();
@@ -256,4 +242,40 @@ $(function () {
             $('.form-check-label').removeClass('radio-active');
             $(this).addClass('radio-active');
         });
+});
+
+/*=====================Counter  Script ======================*/
+var counters = [];
+counters = $(".counter-value");
+var countersQuantity = counters.length;
+console.log(counters + "," + countersQuantity);
+var counter = [];
+
+for (i = 0; i < countersQuantity; i++) {
+    counter[i] = parseInt(counters[i].innerHTML);
+}
+var count = function (start, value, id) {
+    var localStart = start;
+    setInterval(function () {
+        if (localStart < value) {
+            localStart++;
+            counters[id].innerHTML = localStart;
+        }
+    }, 1);
+}
+var cond = true;
+requestScrollAnimation((pos) => {
+    var elAlert = document.getElementById("counter-strike");
+    var isVisible = isScrolledIntoView(elAlert, true);
+
+    if (isVisible) {
+        if (cond) {
+            for (var j = 0; j < countersQuantity; j++) {
+                count(0, counter[j], j);
+            }
+            cond = false;
+        }
+
+
+    }
 });
