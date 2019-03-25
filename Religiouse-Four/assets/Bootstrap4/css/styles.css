@@ -63,15 +63,18 @@ html, body {
     background-repeat: no-repeat;
 }
 
+#home .navbar {
+    padding: 0;
+}
+
 #home .active .nav-link {
-    width: 130px;
-    height: 110px;
     color: #eac76a !important;
     text-transform: uppercase;
     background-color: rgb(101, 41, 67);
     font-family: 'Font Bureau - HeronSans SemiBold';
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.5);
 }
+
 
 #home .nav-bg-color {
     background-color: #282828;
@@ -93,7 +96,6 @@ html, body {
 
 #home .nav-item {
     position: relative;
-    padding: 0px 10px 5px 10px
 }
 
 #my-nav-brand .navbar-brand {
@@ -112,6 +114,7 @@ html, body {
 #home .navbar-nav .nav-link {
     color: #f2f2f2;
     font-size: 19px;
+    padding: 45px 17px 5px 17px;
     text-transform: uppercase;
     font-family: 'Font Bureau - HeronSans SemiBold';
 }
@@ -217,6 +220,20 @@ html, body {
     font-family: 'LithosPro-Black';
 }
 
+.vertical-line {
+    position: relative;
+    display: block;
+}
+
+    .vertical-line:after {
+        content: '';
+        top: 0;
+        position: absolute;
+        height: 86%;
+        border-right: 2px solid #4a4a4a;
+        right: -39px;
+    }
+
 .desgination-text {
     color: #ffffff;
     font-size: 24px;
@@ -261,6 +278,21 @@ html, body {
         border: 2px solid #eac76a;
     }
 
+.below-white {
+    position: relative;
+    display: block;
+}
+
+    .below-white:before {
+        content: '';
+        top: -34px;
+        left: 205px;
+        width: 12%;
+        height: 2px;
+        position: absolute;
+        border: 2px solid #ffffff;
+    }
+
 .do-desc {
     color: #d5d5d5;
     font-weight: 500;
@@ -289,6 +321,7 @@ html, body {
     font-size: 18px;
     font-family: 'Lato', sans-serif;
 }
+
 
 /*================================= 
     Belive Section Styling
@@ -458,6 +491,21 @@ html, body {
         border: 2px solid #eac76a;
     }
 
+.below-blog-white {
+    position: relative;
+    display: block;
+}
+
+    .below-blog-white:before {
+        content: '';
+        top: -24px;
+        left: 329px;
+        width: 8%;
+        height: 2px;
+        position: absolute;
+        border: 2px solid #e3e3e3;
+    }
+
 .blog-desc {
     color: #e3e3e3;
     font-size: 20px;
@@ -536,10 +584,120 @@ html, body {
 
 #news .subscribe-text {
     color: #652943;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
     font-family: 'Lato', sans-serif;
 }
+/*Floating Input Field*/
+#news .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+#news .form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.5;
+    color: #777777;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+#news .form-control:focus {
+    color: #495057;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+#news .form-control {
+    width: 100%;
+    background: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #525252;
+}
+
+    #news .form-control:focus + .form-control-placeholder {
+        font-size: 75%;
+        background: transparent;
+        transform: translate3d(0, -100%, 0);
+        opacity: 1;
+    }
+
+    #news .form-control:focus + .form-control-placeholder,
+    .form-control:valid + .form-control-placeholder {
+        font-size: 75%;
+        transform: translate3d(0, -100%, 0);
+        opacity: 1;
+    }
+
+.btn-subscribe {
+    width: 198px;
+    height: 45px;
+    color: #c59b5f;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(101, 41, 67);
+}
+
+
+
+
+.bg-color-location {
+    padding: 100px 60px;
+    background: #1c1c1c;
+    text-align: center;
+}
+
+.bg-color-mail {
+    padding: 100px 60px;
+    background: #222222;
+    text-align: center;
+}
+
+.bg-color-phone {
+    padding: 100px 60px;
+    background: #1c1c1c;
+    text-align: center;
+}
+
+.desc-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+}
+
+#contact [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-size: 65px;
+    font-style: normal;
+    margin-left: 0px;
+    color: #fff;
+}
+
+.footer-bg-color {
+    background: #151515;
+    padding: 30px 0;
+}
+
+.footer-font {
+    color: #eaeaea;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+}
+
 
 
 
@@ -1003,27 +1161,545 @@ button:focus {
 }
 /*================ Media Query ===============*/
 @media screen and (max-width: 1500px) {
+    .v-line::after {
+        content: '';
+        position: absolute;
+        height: 49.7vh;
+    }
 }
 
 @media screen and (max-width: 1367px) {
+    .v-line::after {
+        content: '';
+        position: absolute;
+        height: 43.6vh;
+    }
 }
 
 @media screen and (max-width: 1024px) {
+    #home .main-banner-text {
+        letter-spacing: 2px;
+        font-size: 40px;
+    }
+
+    .belive-text {
+        font-size: 28px;
+    }
+
+    .belive-sub-text {
+        font-size: 18px;
+    }
+
+    .belive-pera-text {
+        font-size: 18px;
+    }
+
+    .belive-text {
+        font-size: 24px;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 215px;
+    }
+
+    .church-desc {
+        font-size: 18px;
+    }
+
+    .check-text {
+        font-size: 17px;
+    }
+
+    .no-text {
+        font-size: 40px;
+    }
+
+    .work-text {
+        font-size: 38px;
+    }
+
+    .work-heading {
+        font-size: 40px;
+    }
+
+    .v-line::after {
+        content: '';
+        position: absolute;
+        height: 29.3vh;
+    }
+
+    .change-text {
+        font-size: 35px;
+    }
+
+    .pay-banner {
+        padding: 80px 0;
+    }
+
+    .blog-text {
+        font-size: 40px;
+    }
+
+    .btn-donate {
+        width: 201px;
+        font-size: 19px;
+        height: 62px;
+        line-height: 38px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 276px;
+    }
+
+    .blog-desc {
+        font-size: 18px;
+    }
+
+    .black-card-text {
+        font-size: 16px;
+    }
+
+    #news .subscribe-text {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .desc-text {
+        font-size: 17px;
+    }
 }
 
 @media screen and (max-width: 800px) {
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    .main-bg-banner {
+        padding: 70px 0;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 28px;
+    }
+
+    #home .banner-sub-text {
+        font-size: 18px;
+    }
+
+    #home .navbar-nav .nav-link {
+        padding: 32px 17px 26px 17px;
+    }
+
+    .btn-contact {
+        width: 170px;
+        height: 55px;
+        line-height: 45px;
+        font-size: 16px;
+    }
+
+    .name-text {
+        font-size: 26px;
+    }
+
+    desgination-text {
+        font-size: 20px;
+    }
+
+    .desgination-desc-text {
+        font-size: 18px;
+    }
+
+    .what-text {
+        font-size: 28px;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 149px;
+    }
+
+    .do-desc {
+        font-size: 17px;
+    }
+
+    .about-heading {
+        font-size: 20px;
+    }
+
+    .about-desc {
+        font-size: 16px;
+    }
+
+    .media-icon-img {
+        width: 20% !important;
+    }
+
+    .belive-text {
+        font-size: 24px;
+    }
+
+    .belive-sub-text {
+        font-size: 20px;
+    }
+
+    .belive-pera-text {
+        font-size: 18px;
+    }
+
+    .btn-more {
+        width: 130px;
+        height: 52px;
+        line-height: 42px;
+    }
+
+    .media-img-align {
+        text-align: center;
+    }
+
+    .no-text {
+        font-size: 35px;
+    }
+
+    .work-text {
+        font-size: 30px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 28.7vh;
+    }
+
+    .work-heading {
+        font-size: 35px;
+    }
+
+    .change-text {
+        font-size: 28px;
+    }
+
+    .blog-text {
+        font-size: 34px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 203px;
+    }
+
+    .blog-desc {
+        font-size: 16px;
+    }
+
+    .btn-subscribe {
+        width: 157px;
+    }
+
+    #news .subscribe-text {
+        font-size: 17px;
+        margin-top: 0;
+    }
+
+
+
+    .media-social-img-width {
+        width: 40%;
+    }
+
+    .desc-text {
+        font-size: 11px;
+    }
+
+    .footer-font {
+        font-size: 17px;
+    }
+
+    .mt-100 {
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    .main-bg-banner {
+        padding: 70px 0;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 28px;
+    }
+
+    #home .banner-sub-text {
+        font-size: 18px;
+    }
+
+    #home .navbar-nav .nav-link {
+        padding: 32px 17px 26px 17px;
+    }
+
+    .btn-contact {
+        width: 170px;
+        height: 55px;
+        line-height: 45px;
+        font-size: 16px;
+    }
+
+    .name-text {
+        font-size: 26px;
+    }
+
+    desgination-text {
+        font-size: 20px;
+    }
+
+    .desgination-desc-text {
+        font-size: 18px;
+    }
+
+    .what-text {
+        font-size: 28px;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 149px;
+    }
+
+    .do-desc {
+        font-size: 17px;
+    }
+
+    .about-heading {
+        font-size: 20px;
+    }
+
+    .about-desc {
+        font-size: 16px;
+    }
+
+    .media-icon-img {
+        width: 20% !important;
+    }
+
+    .belive-text {
+        font-size: 24px;
+    }
+
+    .belive-sub-text {
+        font-size: 20px;
+    }
+
+    .belive-pera-text {
+        font-size: 18px;
+    }
+
+    .btn-more {
+        width: 130px;
+        height: 52px;
+        line-height: 42px;
+    }
+
+    .media-img-align {
+        text-align: center;
+    }
+
+    .no-text {
+        font-size: 35px;
+    }
+
+    .work-text {
+        font-size: 30px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 36vh;
+    }
+
+    .work-heading {
+        font-size: 35px;
+    }
+
+    .change-text {
+        font-size: 28px;
+    }
+
+    .blog-text {
+        font-size: 34px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 203px;
+    }
+
+    .blog-desc {
+        font-size: 16px;
+    }
+
+    .btn-subscribe {
+        width: 157px;
+    }
+
+    #news .subscribe-text {
+        font-size: 17px;
+        margin-top: 0;
+    }
+
+
+
+    .media-social-img-width {
+        width: 40%;
+    }
+
+    .desc-text {
+        font-size: 11px;
+    }
+
+    .footer-font {
+        font-size: 17px;
+    }
+
+    .mt-100 {
+        margin-top: 50px;
+    }
 }
 
 @media screen and (max-width: 414px) {
+    .media-text-center {
+        text-align: center;
+    }
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 28px;
+        line-height: 37px;
+        text-align: center;
+    }
+
+    #home .banner-sub-text {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 35px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .counter-padding {
+        padding: 30px 100px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 0;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 172px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    .desc-text {
+        font-size: 18px;
+    }
+
+    .media-social-img-width {
+        width: 14%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
 }
 
 @media screen and (max-width: 411px) {
+    .below-blog-white:before {
+        content: '';
+        left: 170px;
+    }
 }
 
 @media screen and (max-width: 375px) {
+    .below-blog-white:before {
+        content: '';
+        left: 153px;
+    }
 }
 
 @media screen and (max-width: 360px) {
@@ -1038,6 +1714,153 @@ button:focus {
 }
 
 @media screen and (max-width: 823px) and (orientation: landscape) {
+
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    #home .banner-sub-text {
+        font-size: 19px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .vertical-line:after {
+        content: '';
+        height: 86%;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 230px;
+    }
+
+    .about-heading {
+        font-size: 18px;
+    }
+
+    .media-icon-img {
+        width: 15%;
+    }
+
+    .about-desc {
+        font-size: 16px;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 0px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .counter-padding {
+        padding: 30px 0px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 55vh;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .work-text {
+        font-size: 28px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 232px;
+    }
+
+    .yellow-card-text {
+        font-size: 15px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    #news .subscribe-text {
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    .desc-text {
+        font-size: 15px;
+    }
+
+    .media-social-img-width {
+        width: 10%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
+
+    .mt-100 {
+        margin-top: 38px;
+    }
 }
 
 @media screen and (max-width: 740px) and (orientation: landscape) {
@@ -1053,4 +1876,125 @@ button:focus {
 }
 
 @media screen and (max-width: 640px) and (orientation: landscape) {
+    .media-text-center {
+        text-align: center;
+    }
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 36px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    #home .banner-sub-text {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 129px;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 35px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .counter-padding {
+        padding: 30px 100px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 0;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 232px;
+    }
+
+    .yellow-card-text {
+        font-size: 15px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    .desc-text {
+        font-size: 18px;
+    }
+
+    .media-social-img-width {
+        width: 14%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
 }
