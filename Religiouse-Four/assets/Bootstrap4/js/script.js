@@ -4,17 +4,21 @@
 
 $(function () {
     var showChar = 200;
-    var moretext = "View More";
-    var lesstext = "View Less";
+    var moretext = "Read More";
+    var lesstext = "Read Less";
     $('.comments-space').each(function () {
         var content = $(this).html();
         if (content.length > showChar) {
             var show_content = content.substr(0, showChar);
             var hide_content = content.substr(showChar, content.length - showChar);
-            var html = show_content + '<span class="remaining-contents"><span>' + hide_content + '</span>' +
-                '<div class="p-0">' +
-                '<a href="" class="morelinksss btn btn-view-more" style="display:block; margin-top:30px">' + moretext + '</a>'
-                + '</span>' + '</div>';
+            var html = show_content +
+                '<span class="remaining-contents"><span class=" p-3">' +
+                hide_content +
+                '</span>' +
+                '<a href="" class="morelinksss btn btn-view-more" style="display:block; margin-top:30px">' +
+                moretext +
+                '</a>' + '</span>';;
+
             $(this).html(html);
         }
     });
