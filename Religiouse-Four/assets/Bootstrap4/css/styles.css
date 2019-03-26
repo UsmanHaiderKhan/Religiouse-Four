@@ -95,6 +95,7 @@ html, body {
 }
 
 #home .nav-item {
+    padding: 0 8px 0 8px;
     position: relative;
 }
 
@@ -227,7 +228,7 @@ html, body {
 
     .vertical-line:after {
         content: '';
-        top: 0;
+        top: 34px;
         position: absolute;
         height: 86%;
         border-right: 2px solid #4a4a4a;
@@ -256,6 +257,10 @@ html, body {
         color: #ffffff;
         text-decoration: none;
     }
+
+.span-color {
+    color: #ffffff;
+}
 
 .what-text {
     color: #eac76a;
@@ -293,17 +298,11 @@ html, body {
         border: 2px solid #ffffff;
     }
 
-.do-desc {
-    color: #d5d5d5;
-    font-weight: 500;
-    font-size: 20px;
-    font-family: 'Lato', sans-serif;
-}
 
 .about-heading {
     color: #ffffff;
     font-weight: 900;
-    font-size: 28px;
+    font-size: 23px;
     text-transform: uppercase;
     font-family: 'Lato', sans-serif;
 }
@@ -311,14 +310,14 @@ html, body {
 .do-desc {
     color: #f0f0f0;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Lato', sans-serif;
 }
 
 .about-desc {
     color: #ffffff;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Lato', sans-serif;
 }
 
@@ -467,6 +466,56 @@ html, body {
     line-height: 50px;
 }
 
+    .btn-donate:hover {
+        color: #e8c569;
+    }
+
+.form-check-inline .form-check-input {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+.form-check-label {
+    background: black;
+    color: white;
+    padding: 15px 37px;
+}
+
+.btn-donation {
+    width: 190px;
+    height: 56px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 42px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    background-color: #ed1c43;
+}
+
+    .btn-donation:hover {
+        background-color: #ed1c43;
+    }
+
+.radio-active {
+    background: #f5d76e;
+    color: white;
+}
+
+.show-hide {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    margin-right: 0.75rem;
+}
+
 /*================================= 
      Blog Section Styling
   =================================*/
@@ -521,7 +570,7 @@ html, body {
 .bg-color-2 {
     border-right: 1px solid #b18359;
     border-left: 1px solid #b18359;
-    padding: 10px;
+    /*border-bottom: 1px solid #b18359;*/
     background: #282828;
 }
 
@@ -706,6 +755,8 @@ html, body {
           Read More Styling
   =================================*/
 .comments-space {
+    /*padding: 13px 10px 0 10px;*/
+    margin-bottom: 0;
     text-align: justify;
 }
 
@@ -1172,9 +1223,11 @@ button:focus {
     .v-line::after {
         content: '';
         position: absolute;
-        height: 43.6vh;
+        height: 43.4vh;
     }
 }
+
+
 
 @media screen and (max-width: 1024px) {
     #home .main-banner-text {
@@ -1272,6 +1325,14 @@ button:focus {
 }
 
 @media screen and (max-width: 800px) {
+    .media-model-mt {
+        margin-top: 25px;
+    }
+
+    .media-padding {
+        padding: 23px 74px;
+    }
+
     .navbar-toggler {
         border: 2px solid #fff;
         border-radius: 0;
@@ -1707,14 +1768,33 @@ button:focus {
 
 
 /*==================== Media Query For Land Scape Mode =====================*/
-@media screen and (max-width: 1280px) and (orientation: landscape) {
+@media screen and (max-width:1370px ) and (orientation: landscape) {
+    .v-line::after {
+        content: '';
+        position: absolute;
+        height: 71.4vh;
+    }
 }
+
+/*@media screen and (max-width: 1367px) and (orientation: landscape) {
+    .v-line::after {
+        content: '';
+        position: absolute;
+        height: 43.4vh;
+    }
+}*/
+
+
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
 }
 
 @media screen and (max-width: 823px) and (orientation: landscape) {
 
+    .navbar-toggler {
+        border: 2px solid #fff;
+        border-radius: 0;
+    }
 
     #home .navbar {
         padding: 10px;
@@ -1757,7 +1837,7 @@ button:focus {
     }
 
     .media-icon-img {
-        width: 15%;
+        width: 20% !important;
     }
 
     .about-desc {
@@ -1790,6 +1870,10 @@ button:focus {
 
     .check-text {
         font-size: 16px;
+    }
+
+    .media-img-align {
+        text-align: center;
     }
 
     .counter-padding {
@@ -1826,7 +1910,7 @@ button:focus {
 
     .below-blog-white:before {
         content: '';
-        left: 232px;
+        left: 203px;
     }
 
     .yellow-card-text {
@@ -1847,7 +1931,7 @@ button:focus {
     }
 
     .media-social-img-width {
-        width: 10%;
+        width: 30%;
     }
 
     .bg-color-mail {
@@ -1864,15 +1948,543 @@ button:focus {
 }
 
 @media screen and (max-width: 740px) and (orientation: landscape) {
+    .media-text-center {
+        text-align: center;
+    }
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 36px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    #home .banner-sub-text {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .vertical-line:after {
+        content: '';
+        height: 0;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 129px;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 35px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .media-img-align {
+        text-align: center;
+    }
+
+    .counter-padding {
+        padding: 30px 100px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 0;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 232px;
+    }
+
+
+
+    .yellow-card-text {
+        font-size: 15px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    .desc-text {
+        font-size: 18px;
+    }
+
+    .media-social-img-width {
+        width: 14%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
 }
 
 @media screen and (max-width: 736px) and (orientation: landscape) {
+    .media-text-center {
+        text-align: center;
+    }
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 36px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    #home .banner-sub-text {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .vertical-line:after {
+        content: '';
+        height: 0;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 129px;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 35px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .media-img-align {
+        text-align: center;
+    }
+
+    .counter-padding {
+        padding: 30px 100px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 0;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 232px;
+    }
+
+
+
+    .yellow-card-text {
+        font-size: 15px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    .desc-text {
+        font-size: 18px;
+    }
+
+    .media-social-img-width {
+        width: 14%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
 }
 
 @media screen and (max-width: 731px) and (orientation: landscape) {
+    .media-text-center {
+        text-align: center;
+    }
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 36px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    #home .banner-sub-text {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .vertical-line:after {
+        content: '';
+        height: 0;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 129px;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 35px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .media-img-align {
+        text-align: center;
+    }
+
+    .counter-padding {
+        padding: 30px 100px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 0;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 232px;
+    }
+
+
+
+    .yellow-card-text {
+        font-size: 15px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    .desc-text {
+        font-size: 18px;
+    }
+
+    .media-social-img-width {
+        width: 14%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
 }
 
 @media screen and (max-width: 667px) and (orientation: landscape) {
+    .media-text-center {
+        text-align: center;
+    }
+
+    #home .navbar {
+        padding: 10px;
+    }
+
+    #home .main-banner-text {
+        letter-spacing: 0px;
+        font-size: 36px;
+        line-height: 46px;
+        text-align: center;
+    }
+
+    #home .banner-sub-text {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-prev {
+        bottom: 8px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        bottom: 8px;
+    }
+
+    .vertical-line:after {
+        content: '';
+        height: 0;
+    }
+
+    .media-pastor-img {
+        width: 40% !important;
+    }
+
+    .below-white::before {
+        content: '';
+        left: 129px;
+    }
+
+    .name-text {
+        font-size: 20px;
+    }
+
+    .desgination-text {
+        font-size: 18px;
+    }
+
+    .media-what-mt {
+        margin-top: 35px;
+    }
+
+    .do-desc {
+        font-size: 16px;
+    }
+
+    .belive-pera-text {
+        font-size: 17px;
+    }
+
+    .belive-text {
+        font-size: 20px;
+    }
+
+    .check-text {
+        font-size: 16px;
+    }
+
+    .media-img-align {
+        text-align: center;
+    }
+
+    .counter-padding {
+        padding: 30px 100px;
+    }
+
+    .v-line::after {
+        content: '';
+        height: 0;
+    }
+
+    .work-heading {
+        font-size: 26px;
+    }
+
+    .change-text {
+        font-size: 20px;
+    }
+
+    .btn-donate {
+        width: 170px;
+        font-size: 17px;
+        height: 57px;
+        line-height: 32px;
+    }
+
+    .blog-text {
+        font-size: 26px;
+    }
+
+    .below-blog-white:before {
+        content: '';
+        left: 232px;
+    }
+
+
+
+    .yellow-card-text {
+        font-size: 15px;
+    }
+
+    .bg-color-location {
+        padding: 43px 43px;
+    }
+
+    .desc-text {
+        font-size: 18px;
+    }
+
+    .media-social-img-width {
+        width: 14%;
+    }
+
+    .bg-color-mail {
+        padding: 43px 43px;
+    }
+
+    .bg-color-phone {
+        padding: 43px 43px;
+    }
 }
 
 @media screen and (max-width: 640px) and (orientation: landscape) {
@@ -1902,6 +2514,11 @@ button:focus {
 
     #home .owl-carousel .owl-nav button.owl-next {
         bottom: 8px;
+    }
+
+    .vertical-line:after {
+        content: '';
+        height: 0;
     }
 
     .media-pastor-img {
