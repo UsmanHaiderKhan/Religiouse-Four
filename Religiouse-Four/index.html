@@ -36,16 +36,16 @@
                             <a class="nav-link scroll" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="#slider">Services</a>
+                            <a class="nav-link scroll" href="#services">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="#gallery">Gallery</a>
+                            <a class="nav-link scroll" href="#blog">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="#gallery">Team</a>
+                            <a class="nav-link scroll" href="#work">Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link scroll" href="#contact-us">Contact</a>
+                            <a class="nav-link scroll" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -71,7 +71,7 @@
                                     dolore magna aliqua sad minim veniam.
                                 </p>
                                 <div class="mt-30">
-                                    <a href="#" class="btn btn-contact">Contact US</a>
+                                    <a href="#contact" class="btn btn-contact">Contact US</a>
                                 </div>
                             </div>
                         </div>
@@ -97,7 +97,7 @@
                                     dolore magna aliqua sad minim veniam.
                                 </p>
                                 <div class="mt-30">
-                                    <a href="#" class="btn btn-contact">Contact US</a>
+                                    <a href="#contact" class="btn btn-contact">Contact US</a>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 offset-md-1 media-what-mt">
-                    <h2 class="what-text below-do">what we <span class="color-text">do</span></h2>
+                    <h2 class="what-text below-do"><span class="span-color">what we </span><span class="color-text">do</span></h2>
                     <p class="do-desc mt-35 below-white">
                         Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur aliquet
@@ -196,7 +196,7 @@
             </div>
         </div>
     </section>
-    <section class="mt-100">
+    <section class="mt-100" id="services">
         <div class="row">
             <div class="col-lg-6 p-0">
                 <img src="assets/Images/prayer/p1.png" class="img-fluid" />
@@ -344,8 +344,70 @@
                         <i class="flaticon-payment"></i>
                         <h2 class="work-heading">Let’s Work Together!</h2>
                         <h2 class="change-text">Give a little & change a lot.</h2>
+                        <!-- The Modal -->
+                        <div class="modal fadeIn" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Donate the Chruch</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-9 p-0">
+                                                <div class="text-center">
+                                                    <p class="text-uppercase mb-0">
+                                                        <h4>DONATE TO OUR CAMPAIGN!</h4>
+                                                    </p>
+                                                    <form action="" class="mt-40">
+                                                        <div class="form-check-inline">
+                                                            <label class="form-check-label radio-active" for="radio1">
+                                                                <input type="radio" class="form-check-input radio-active" id="radio1" name="donation"
+                                                                       value="₽5" checked>₽5
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check-inline">
+                                                            <label class="form-check-label" for="radio2">
+                                                                <input type="radio" class="form-check-input" id="radio2" name="donation" value="₽10">₽10
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check-inline">
+                                                            <label class="form-check-label" for="radio3">
+                                                                <input type="radio" class="form-check-input" id="radio3" name="donation" value="₽15">₽15
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check-inline">
+                                                            <label class="form-check-label" for="radio4">
+                                                                <input type="radio" class="form-check-input" id="radio4" name="donation" value="₽20">₽20
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check-inline media-model-mt">
+                                                            <label class="form-check-label" for="radio5">
+                                                                <input type="radio" class="form-check-input" id="radio5" name="donation" value="other">Other
+                                                            </label>
+                                                        </div>
+                                                        <div class="display-none mt-15 text-center media-padding">
+                                                            <input type="number" class="form-check-input form-control" id="radio6" name="donation" value="" placeholder="Make Your Own Donation Example / 100$">
+                                                        </div>
+                                                        <div class="mt-90">
+                                                            <button type="submit" class="btn btn-donation">Donate</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="mt-70">
-                            <a href="#" class="btn btn-donate">Donate Now</a>
+                            <a href="#" class="btn btn-donate" data-toggle="modal" data-target="#myModal">Donate Now</a>
                         </div>
                     </div>
                 </div>
@@ -375,14 +437,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
-                                    <!--Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.-->
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -396,13 +458,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -416,13 +479,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -436,13 +500,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -456,13 +521,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -476,13 +542,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -496,13 +563,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -516,13 +584,14 @@
                                 </p>
                             </div>
                             <div class="bg-color-2">
-                                <p class="black-card-text">
+                                <p class="black-card-text comments-space">
+                                    Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                     Lorem ipsum dolor it amet consectetur adipisicing elit, sed do eiusmod tempor incidid fallen like death.
                                 </p>
                             </div>
-                            <div>
+                            <!--<div>
                                 <a href="#" class="btn btn-view-more btn-block">View More</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
