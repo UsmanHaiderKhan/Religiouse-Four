@@ -91,48 +91,72 @@ $(document).ready(function () {
         showItems: 4
     });
 
+
 });
 
 
 /*===================== Owl Carousel Slider ======================*/
 $(function () {
-    $('#owl-one').owlCarousel({
-        loop: false,
-        margin: 0,
-        dots: false,
-        nav: true,
-        item: 1,
-        navText: ["<i class='flaticon-left'></i>", "<i class='flaticon-next'></i>"],
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                dots: false,
-                nav: true
-            },
-            400: {
-                items: 1,
-                dots: false,
-                nav: true
-            },
-            600: {
-                items: 1,
-                dots: false,
-                nav: true
-            },
-            800: {
-                items: 1,
-                dots: false,
-                nav: true
-            },
-            1000: {
-                items: 1,
-                dots: false,
-                nav: true
+    $('#owl-one').on('initialized.owl.carousel changed.owl.carousel',
+        function (e) {
+            if (!e.namespace) {
+                return;
             }
-        }
-    });
+            var carousel = e.relatedTarget;
+            $('.service-slider-counter')
+                .text(carousel.relative(carousel.current()) + 1);
+        }).owlCarousel({
+            items: 1,
+            loop: false,
+            margin: 0,
+            dots: false,
+            nav: true,
+            navText: ["<i class='flaticon-left'></i>", "<i class='flaticon-next'></i>"],
+            dotsContainer: '#ServiceCustomDots'
+            /*autoplay:true,
+              autoplayTimeout:3000*/
+            /*nav:true*/
+        });
 });
+
+//$(function () {
+//    $('#owl-one').owlCarousel({
+//        loop: false,
+//        margin: 0,
+//        dots: false,
+//        nav: true,
+//        item: 1,
+//        navText: ["<i class='flaticon-left'></i>", "<i class='flaticon-next'></i>"],
+//        responsiveClass: true,
+//        responsive: {
+//            0: {
+//                items: 1,
+//                dots: false,
+//                nav: true
+//            },
+//            400: {
+//                items: 1,
+//                dots: false,
+//                nav: true
+//            },
+//            600: {
+//                items: 1,
+//                dots: false,
+//                nav: true
+//            },
+//            800: {
+//                items: 1,
+//                dots: false,
+//                nav: true
+//            },
+//            1000: {
+//                items: 1,
+//                dots: false,
+//                nav: true
+//            }
+//        }
+//    });
+//});
 $(function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
