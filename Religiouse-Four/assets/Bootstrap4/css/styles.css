@@ -1,4 +1,4 @@
-﻿/*================================= 
+﻿/*=================================
         Font-Family's Start
   =================================*/
 @font-face {
@@ -40,7 +40,7 @@
     font-family: 'LithosPro-Regular';
     src: url('../../Fonts/LithosPro-Regular.otf') format('opentype');
 }
-/*================================= 
+/*=================================
         Font-Family's End
   =================================*/
 
@@ -54,7 +54,7 @@ html, body {
 }
 
 
-/*================================= 
+/*=================================
     Navbar Section Styling
   =================================*/
 .full-bg-banner {
@@ -228,7 +228,7 @@ html, body {
 
 
 
-/*================================= 
+/*=================================
     About Section Styling
   =================================*/
 .name-text {
@@ -338,11 +338,11 @@ html, body {
 }
 
 
-/*================================= 
+/*=================================
     Belive Section Styling
   =================================*/
 .bg-img-1 {
-    padding: 60px 60px;
+    padding: 98px 60px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -399,7 +399,7 @@ html, body {
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
-/*================================= 
+/*=================================
      Counter Section Styling
   =================================*/
 #counter {
@@ -428,7 +428,7 @@ html, body {
     .v-line::after {
         content: '';
         position: absolute;
-        height: 70vh;
+        height: 100%;
         top: 0;
         left: 98%;
         border-right: 4px solid #575757;
@@ -438,7 +438,7 @@ html, body {
     padding: 100px 0;
 }
 
-/*================================= 
+/*=================================
      banner Section Styling
   =================================*/
 #work [class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
@@ -474,12 +474,14 @@ html, body {
     border-color: rgb(234, 199, 106);
     border-style: solid;
     border-radius: 60px;
-    font-weight: 900;
+    font-weight: 700;
     font-family: 'Lato', sans-serif;
     width: 240px;
     font-size: 22px;
-    height: 75px;
+    height: 70px;
     line-height: 50px;
+    letter-spacing: .3px;
+    text-transform: uppercase;
 }
 
     .btn-donate:hover {
@@ -532,7 +534,7 @@ html, body {
     margin-right: 0.75rem;
 }
 
-/*================================= 
+/*=================================
      Blog Section Styling
   =================================*/
 .blog-text {
@@ -767,7 +769,7 @@ html, body {
 
 
 
-/*================================= 
+/*=================================
           Read More Styling
   =================================*/
 .comments-space {
@@ -1228,18 +1230,17 @@ button:focus {
 }
 /*================ Media Query ===============*/
 @media screen and (max-width: 1500px) {
-    .v-line::after {
-        content: '';
-        position: absolute;
-        height: 49.7vh;
+
+
+    .bg-img-1 {
+        padding: 78px 60px;
     }
 }
 
 @media screen and (max-width: 1367px) {
-    .v-line::after {
-        content: '';
-        position: absolute;
-        height: 43.4vh;
+
+    .bg-img-1 {
+        padding: 64px 60px;
     }
 }
 
@@ -1249,6 +1250,10 @@ button:focus {
     #home .main-banner-text {
         letter-spacing: 2px;
         font-size: 40px;
+    }
+
+    .bg-img-1 {
+        padding: 24px 60px;
     }
 
     .belive-text {
@@ -1264,7 +1269,7 @@ button:focus {
     }
 
     .belive-text {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .below-white::before {
@@ -1273,11 +1278,11 @@ button:focus {
     }
 
     .church-desc {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .check-text {
-        font-size: 17px;
+        font-size: 15px;
     }
 
     .no-text {
@@ -1292,11 +1297,6 @@ button:focus {
         font-size: 40px;
     }
 
-    .v-line::after {
-        content: '';
-        position: absolute;
-        height: 29.3vh;
-    }
 
     .change-text {
         font-size: 35px;
@@ -1340,7 +1340,7 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 801px) {
     .media-model-mt {
         margin-top: 25px;
     }
@@ -1369,6 +1369,10 @@ button:focus {
 
     #home .navbar-nav .nav-link {
         padding: 32px 17px 26px 17px;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        left: 58%;
     }
 
     .btn-contact {
@@ -1499,7 +1503,7 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     .navbar-toggler {
         border: 2px solid #fff;
         border-radius: 0;
@@ -1511,6 +1515,7 @@ button:focus {
 
     #home .main-banner-text {
         letter-spacing: 0px;
+        line-height: 32px;
         font-size: 28px;
     }
 
@@ -1521,6 +1526,8 @@ button:focus {
     #home .navbar-nav .nav-link {
         padding: 32px 17px 26px 17px;
     }
+
+
 
     .btn-contact {
         width: 170px;
@@ -1650,9 +1657,17 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 415px) {
     .media-text-center {
         text-align: center;
+    }
+
+    #home .owl-carousel .owl-nav button.owl-next {
+        left: 63%;
+    }
+
+    .service-slider-counter {
+        top: -59px;
     }
 
     #home .navbar {
@@ -1772,7 +1787,7 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 376px) {
     .below-blog-white:before {
         content: '';
         left: 153px;
@@ -1784,28 +1799,19 @@ button:focus {
 
 
 /*==================== Media Query For Land Scape Mode =====================*/
-@media screen and (max-width:1370px ) and (orientation: landscape) {
-    .v-line::after {
-        content: '';
-        position: absolute;
-        height: 71.4vh;
+@media screen and (max-width:1300px ) and (orientation: landscape) {
+    .bg-img-1 {
+        padding: 30px 60px;
     }
 }
-
-/*@media screen and (max-width: 1367px) and (orientation: landscape) {
-    .v-line::after {
-        content: '';
-        position: absolute;
-        height: 43.4vh;
-    }
-}*/
-
-
 
 @media screen and (max-width: 1024px) and (orientation: landscape) {
+    .desc-text {
+        font-size: 15px;
+    }
 }
 
-@media screen and (max-width: 823px) and (orientation: landscape) {
+@media screen and (max-width: 824px) and (orientation: landscape) {
 
     .navbar-toggler {
         border: 2px solid #fff;
@@ -1826,11 +1832,16 @@ button:focus {
         font-size: 19px;
     }
 
+    .service-slider-counter {
+        top: -59px;
+    }
+
     #home .owl-carousel .owl-nav button.owl-prev {
         bottom: 8px;
     }
 
     #home .owl-carousel .owl-nav button.owl-next {
+        left: 58%;
         bottom: 8px;
     }
 
@@ -1966,6 +1977,10 @@ button:focus {
 @media screen and (max-width: 740px) and (orientation: landscape) {
     .media-text-center {
         text-align: center;
+    }
+
+    .service-slider-counter {
+        top: -59px;
     }
 
     #home .navbar {
@@ -2233,7 +2248,7 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 731px) and (orientation: landscape) {
+@media screen and (max-width: 732px) and (orientation: landscape) {
     .media-text-center {
         text-align: center;
     }
@@ -2368,7 +2383,7 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 667px) and (orientation: landscape) {
+@media screen and (max-width: 668px) and (orientation: landscape) {
     .media-text-center {
         text-align: center;
     }
@@ -2503,7 +2518,7 @@ button:focus {
     }
 }
 
-@media screen and (max-width: 640px) and (orientation: landscape) {
+@media screen and (max-width: 641px) and (orientation: landscape) {
     .media-text-center {
         text-align: center;
     }
